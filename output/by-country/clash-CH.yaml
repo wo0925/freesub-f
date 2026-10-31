@@ -60,7 +60,7 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇨🇭 CH 06 - xiaohe
   type: vless
   server: 208.69.78.217
@@ -72,8 +72,22 @@ proxies:
   reality-opts:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇨🇭 CH 07 - xiaohe
+  type: vless
+  server: 195.141.65.98
+  port: 443
+  uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 148-253-210-191.sslip.io
+  network: ws
+  ws-opts:
+    path: /test-ws
+    headers:
+      Host: 148-253-210-191.sslip.io
+- name: 🇨🇭 CH 08 - xiaohe
   type: vless
   server: 208.69.78.217
   port: 2053
@@ -85,7 +99,7 @@ proxies:
     public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
   servername: www.apple.com
   client-fingerprint: random
-- name: 🇨🇭 CH 08 - xiaohe
+- name: 🇨🇭 CH 09 - xiaohe
   type: vless
   server: 149.33.15.213
   port: 443
@@ -107,6 +121,7 @@ proxy-groups:
   - 🇨🇭 CH 06 - xiaohe
   - 🇨🇭 CH 07 - xiaohe
   - 🇨🇭 CH 08 - xiaohe
+  - 🇨🇭 CH 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -120,5 +135,6 @@ proxy-groups:
   - 🇨🇭 CH 06 - xiaohe
   - 🇨🇭 CH 07 - xiaohe
   - 🇨🇭 CH 08 - xiaohe
+  - 🇨🇭 CH 09 - xiaohe
 rules:
 - MATCH,PROXIES
