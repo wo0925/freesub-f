@@ -53,6 +53,20 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🇫🇮 FI 05 - xiaohe
+  type: vless
+  server: 2.26.147.65
+  port: 443
+  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cat.ilovezhenjiu.top
+  network: ws
+  ws-opts:
+    path: /cgciws
+    headers:
+      Host: cat.ilovezhenjiu.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,6 +76,7 @@ proxy-groups:
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
   - 🇫🇮 FI 04 - xiaohe
+  - 🇫🇮 FI 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -71,5 +86,6 @@ proxy-groups:
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
   - 🇫🇮 FI 04 - xiaohe
+  - 🇫🇮 FI 05 - xiaohe
 rules:
 - MATCH,PROXIES
